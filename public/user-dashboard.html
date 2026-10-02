@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;500;600&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<!-- pin this to a real version from npmjs.com/package/lucide before shipping -->
+<script src="https://unpkg.com/lucide@0.525.0"></script>
+<title>Resolve</title>
+<link rel="stylesheet" href="./css/user-dashboard.css" />
+</head>
+
+<body>
+
+<div class="sidebarBackdrop"></div>
+
+<main>
+<!-- <div class="shadowSidebar"></div> -->
+
+<aside class="topAside">
+    <section class="sidebar">
+    <div class="sidebarLogo">
+      <svg width="140" height="35" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Resolve">
+        <rect x="0" y="0" width="60" height="60" rx="14" fill="#0F766E"/>
+        <text x="30" y="42" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" fill="#FFFFFF" text-anchor="middle">R</text>
+        <text x="70" y="41" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" letter-spacing="0.5" fill="#171717">esolve</text>
+      </svg>
+
+      <button type="button" class="sidebarClose" aria-label="Close menu"><i data-lucide="x"></i></button>
+    </div>
+
+    <nav class="sidebarNav">
+      <a href="./user-dashboard.html" class="navItem active"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+      <a href="./user-complaints.html" class="navItem"><i data-lucide="clipboard-list"></i>My Complaints</a>
+      <a href="./user-profile.html" class="navItem"><i data-lucide="user"></i>My Profile</a>
+    </nav>
+
+    <a href="./logout.html" class="navItem logoutItem"><i data-lucide="log-out"></i>Logout</a>
+    </section>
+</aside>
+
+<nav>
+    <div class="navLeft">
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+    </button>
+        <svg width="110" height="28" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Resolve" class="navLogo">
+            <rect x="0" y="0" width="60" height="60" rx="14" fill="#0F766E"/>
+            <text x="30" y="42" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" fill="#FFFFFF" text-anchor="middle">R</text>
+            <text x="70" y="41" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" letter-spacing="0.5" fill="#171717">esolve</text>
+        </svg>
+    </div>
+
+    <div class="profile">
+        <i data-lucide="user" class="userPic"></i>
+
+        <div class="profileInfo">
+            <h3 class="username"></h3>
+            <p class="role">Resident</p>
+        </div>
+    </div>
+</nav>
+
+
+<section class="hero">
+    <section class="generalInfo">
+        <div class="generalText">
+
+            <div class="generalGreeting">
+                <h1 data-greeting="timeofday">Good Morning</h1>
+                <i data-lucide="hand"></i>
+            </div>
+
+            
+        </div>
+
+        
+        <h2>Status Summary</h2>
+
+        <div class="stats">
+            <div class="totalComplaints stat">
+                <div class="statusHeads ">
+                    <h2>Total Complaints</h2>
+                    <i data-lucide="clipboard-list"></i>
+                </div>
+                <h2 class="total">–</h2>
+            </div>
+
+
+            <div class="pendingComplaints stat">
+                <div class="statusHeads ">
+                    <h2>Pending</h2>
+                    <i data-lucide="hourglass"></i>
+                </div>
+                <h2 class="pending">–</h2>
+            </div>
+
+
+            <div class="resolvedComplaints stat">
+                <div class="statusHeads">
+                    <h2>Resolved</h2>
+                    <i data-lucide="circle-check"></i>
+                </div>
+                <h2 class="resolved">–</h2>
+            </div>
+
+
+            <div class="resolutionTime stat">
+                <div class="statusHeads">
+                    <h2>Avg. Res Time</h2>
+                    <i data-lucide="timer"></i>
+                </div>
+                <h2 class="time">–</h2>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="recent">
+        <div class="recentHeader">
+            <h2>Recent Complaints</h2>
+            <a href="./user-complaints.html">View All</a>
+        </div>
+
+        <div class="recentTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">ISSUE</th>
+                        <th scope="col">CATEGORY</th>
+                        <th scope="col">STATUS</th>
+                        <th scope="col">CREATED</th>
+                    </tr>
+                </thead>
+                <tbody id="recentBody"></tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <section class="newComplaint">
+        <aside class="bottomAside">
+            <div class="footerText">
+                <h3>Need to report a new issue ?</h3>
+                <p>Click the button to submit a complaint.</p>
+            </div>
+
+            <button type="button" class="createComplaint">
+                Submit Complaint
+                <i data-lucide="move-right"></i>
+            </button>
+        </aside>
+    </section>
+
+</section>
+
+</main>
+<script src="./js/api.js"></script>
+<script src="./js/sidebar.js"></script>
+<script src="./js/new-complaint.js"></script>
+<script src="./js/user-dashboard.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

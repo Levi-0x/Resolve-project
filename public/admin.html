@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;500;600&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<!-- pin this to a real version from npmjs.com/package/lucide before shipping -->
+<script src="https://unpkg.com/lucide@0.525.0"></script>
+<title>Resolve</title>
+<link rel="stylesheet" href="./css/admin.css" />
+</head>
+
+<body>
+
+<div class="sidebarBackdrop"></div>
+
+<aside>
+    <section class="sidebar">
+    <div class="sidebarLogo">
+      <svg width="140" height="35" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Resolve">
+        <rect x="0" y="0" width="60" height="60" rx="14" fill="#0F766E"/>
+        <text x="30" y="42" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" fill="#FFFFFF" text-anchor="middle">R</text>
+        <text x="70" y="41" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" letter-spacing="0.5" fill="#171717">esolve</text>
+      </svg>
+      <button type="button" class="sidebarClose" aria-label="Close menu"><i data-lucide="x"></i></button>
+    </div>
+
+    <nav class="sidebarNav">
+      <a href="./admin.html" class="navItem"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+      <a href="./admin-users.html" class="navItem"><i data-lucide="users"></i>Users</a>
+      <a href="./admin-complaints.html" class="navItem"><i data-lucide="clipboard-list"></i>Complaints</a>
+      <a href="./admin-reports.html" class="navItem"><i data-lucide="file-text"></i>Reports</a>
+      <a href="./admin-settings.html" class="navItem"><i data-lucide="settings"></i>Settings</a>
+    </nav>
+
+    <a href="./logout.html" class="navItem logoutItem"><i data-lucide="log-out"></i>Logout</a>
+    </section>
+</aside>
+
+<nav>
+    <div class="navLeft">
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+    </button>
+        <svg width="110" height="28" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Resolve" class="navLogo">
+            <rect x="0" y="0" width="60" height="60" rx="14" fill="#0F766E"/>
+            <text x="30" y="42" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" fill="#FFFFFF" text-anchor="middle">R</text>
+            <text x="70" y="41" font-family="'Josefin Sans', sans-serif" font-weight="600" font-size="34" letter-spacing="0.5" fill="#171717">esolve</text>
+        </svg>
+    </div>
+
+    <div class="profile">
+        <i data-lucide="user" class="userPic"></i>
+
+        <div class="profileInfo">
+            <h3 class="username">Mr Okafor Chukwudi</h3>
+            <p class="role">Administrator</p>
+        </div>
+    </div>
+</nav>
+
+<main>
+<section class="hero">
+    <section class="generalInfo">
+        <div class="generalText">
+
+            <div class="generalGreeting">
+                <h1>Overview</h1>
+                <i data-lucide="layout-dashboard"></i>
+            </div>            
+
+            <p class="generalSub">Everything happening across the residence, at a glance.</p>
+        </div>
+
+        <h2>Status Summary</h2>
+
+        <div class="stats">
+            <div class="totalUsers stat">
+            <div class="statusHeads">
+                <h2>Total Users</h2>
+                <i data-lucide="users"></i>
+            </div>
+            <h2 class="total">48</h2>
+            </div>
+
+            <div class="totalComplaints stat">
+            <div class="statusHeads">
+                <h2>Total Complaints</h2>
+                <i data-lucide="clipboard-list"></i>
+            </div>
+            <h2 class="total">27</h2>
+            </div>
+
+            <div class="resolvedComplaints stat">
+            <div class="statusHeads">
+                <h2>Resolved</h2>
+                <i data-lucide="circle-check"></i>
+            </div>
+            <h2 class="resolved">20</h2>
+            </div>
+
+            <div class="pendingComplaints stat">
+            <div class="statusHeads">
+                <h2>Pending</h2>
+                <i data-lucide="hourglass"></i>
+            </div>
+            <h2 class="pending">7</h2>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="recent">
+        <div class="recentHeader">
+            <h2>Recent Complaints</h2>
+            <a href="">View All</a>
+        </div>
+
+        <div class="recentTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">RESIDENT</th>
+                        <th scope="col">ISSUE</th>
+                        <th scope="col">CATEGORY</th>
+                        <th scope="col">STATUS</th>
+                        <th scope="col">CREATED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amadi C.</td>
+                        <td>Leaking tap in bathroom</td>
+                        <td>Plumbing</td>
+                        <td><span class="statusPill pending">Pending</span></td>
+                        <td>13th Apr 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Chuka N.</td>
+                        <td>Sparking socket in bedroom</td>
+                        <td>Electrical</td>
+                        <td><span class="statusPill pending">Pending</span></td>
+                        <td>13th Apr 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Fatima B.</td>
+                        <td>Broken bunk bed</td>
+                        <td>Furniture</td>
+                        <td><span class="statusPill pending">Pending</span></td>
+                        <td>12th Apr 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Tunde K.</td>
+                        <td>Damaged bedroom door</td>
+                        <td>Maintenance</td>
+                        <td><span class="statusPill resolved">Resolved</span></td>
+                        <td>10th Apr 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+</main>
+
+<script src="./js/sidebar.js"></script>
+<script src="./js/admin.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
