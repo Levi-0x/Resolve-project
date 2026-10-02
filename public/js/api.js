@@ -1,5 +1,7 @@
-// Shared by every page. Change API_BASE if the backend runs somewhere else.
-const API_BASE = "http://localhost:3000";
+// Shared by every page. Local pages talk to the local backend, the deployed site talks to Render.
+const API_BASE = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+  ? "http://localhost:3000"
+  : "https://resolve-project.onrender.com";
 
 const Session = {
   save({ accessToken, refreshToken, user }) {

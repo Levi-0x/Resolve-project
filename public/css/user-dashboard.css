@@ -527,7 +527,7 @@ td {
     border-radius: 15px;
 }
 
-.total, .pending, .resolved, .time {
+h2.total, h2.pending, h2.resolved, h2.time {
     font-size: 2.25rem;
     line-height: 1;
 }
